@@ -40,7 +40,6 @@ module.exports = {
     'accessor-pairs': 'error',
     'arrow-body-style': 'error',
     'camelcase': 'error',
-    'capitalized-comments': 'error',
     'class-methods-use-this': 'error',
     'complexity': 'error',
     'consistent-return': 'error',
