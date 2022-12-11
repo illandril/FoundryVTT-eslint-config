@@ -1,0 +1,32 @@
+{
+  "name": "@illandril/eslint-config-foundryvtt",
+  "version": "1.0.0",
+  "description": "ESLint rules used by illandril for his FoundryVTT modules",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/illandril/FoundryVTT-eslint-config.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": "Joe Spandrusyszyn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/illandril/FoundryVTT-eslint-config/issues"
+  },
+  "homepage": "https://github.com/illandril/FoundryVTT-eslint-config#readme",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.46.0",
+    "@typescript-eslint/parser": "^5.46.0",
+    "eslint": "^8.29.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-import": "^2.26.0"
+  }
+}
