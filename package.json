@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
-    "test": "echo \"WARNING: no test specified\""
+    "test": "echo \"WARNING: no test specified\"",
+    "validate": "npm run test"
   },
   "repository": {
     "type": "git",
