@@ -25,7 +25,6 @@ module.exports = {
     'no-await-in-loop': 'error',
     'no-constant-binary-expression': 'error',
     'no-constructor-return': 'error',
-    'no-duplicate-imports': 'error',
     'no-new-native-nonconstructor': 'error',
     'no-promise-executor-return': 'error',
     'no-self-compare': 'error',
@@ -33,7 +32,6 @@ module.exports = {
     'no-unmodified-loop-condition': 'error',
     'no-unreachable-loop': 'error',
     'no-unused-private-class-members': 'error',
-    'no-use-before-define': 'error',
     'require-atomic-updates': 'error',
 
     'accessor-pairs': 'error',
@@ -48,7 +46,7 @@ module.exports = {
     'dot-location': ['error', 'property'],
     eqeqeq: 'error',
     'grouped-accessor-pairs': 'error',
-    'id-length': ['error', { min: 3 }],
+    'id-length': ['error', { min: 2, exceptions: ['x', 'y', 'i'] }],
     'max-depth': ['error', 4],
     'max-lines-per-function': ['error', 50],
     'max-nested-callbacks': ['error', 4],
@@ -141,6 +139,7 @@ module.exports = {
     'wrap-iife': ['error', 'inside'],
 
     'import/newline-after-import': 'error',
+    'import/no-duplicates': 'error',
     'import/order': ['error', {
       'newlines-between': 'never',
       alphabetize: { order: 'asc' },
