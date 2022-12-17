@@ -170,6 +170,7 @@ module.exports = {
         'max-lines-per-function': 'off',
         'max-nested-callbacks': 'off',
         'max-len': 'off',
+        '@typescript-eslint/unbound-method': 'off',
       },
     },
   ],
