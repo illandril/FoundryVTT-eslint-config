@@ -1,3 +1,21 @@
+const rulesWithTSOverrides = {
+  'brace-style': ['error', '1tbs'],
+  'comma-dangle': ['error', 'always-multiline'],
+  'comma-spacing': 'error',
+  'dot-notation': 'error',
+  indent: ['error', 2],
+  'keyword-spacing': ['error', { before: true, after: true }],
+  'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
+  'no-extra-parens': 'error',
+  'no-invalid-this': 'error',
+  'object-curly-spacing': ['error', 'always'],
+  quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }],
+  semi: ['error', 'always'],
+  'space-before-blocks': ['error', 'always'],
+  'space-before-function-paren': ['error', { anonymous: 'never', named: 'never', asyncArrow: 'always' }],
+  'space-infix-ops': 'error',
+};
+
 module.exports = {
   root: true,
   env: {
@@ -122,7 +140,7 @@ module.exports = {
     'no-tabs': 'error',
     'no-trailing-spaces': 'error',
     'no-whitespace-before-property': 'error',
-    'object-curly-newline': ['error', { multiline: true }],
+    'object-curly-newline': ['error', { consistent: true }],
     'operator-linebreak': ['error', 'before'],
     'padded-blocks': ['error', 'never'],
     'rest-spread-spacing': 'error',
@@ -142,6 +160,8 @@ module.exports = {
       'newlines-between': 'never',
       alphabetize: { order: 'asc' },
     }],
+
+    ...rulesWithTSOverrides,
   },
   reportUnusedDisableDirectives: true,
   overrides: [
@@ -161,23 +181,10 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
       ],
-      rules: {
-        '@typescript-eslint/brace-style': ['error', '1tbs'],
-        '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
-        '@typescript-eslint/comma-spacing': 'error',
-        '@typescript-eslint/dot-notation': 'error',
-        '@typescript-eslint/indent': ['error', 2],
-        '@typescript-eslint/keyword-spacing': ['error', { before: true, after: true }],
-        '@typescript-eslint/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
-        '@typescript-eslint/no-extra-parens': 'error',
-        '@typescript-eslint/no-invalid-this': 'error',
-        '@typescript-eslint/object-curly-spacing': ['error', 'always'],
-        '@typescript-eslint/quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }],
-        '@typescript-eslint/semi': ['error', 'always'],
-        '@typescript-eslint/space-before-blocks': ['error', 'always'],
-        '@typescript-eslint/space-before-function-paren': ['error', { anonymous: 'never', named: 'never', asyncArrow: 'always' }],
-        '@typescript-eslint/space-infix-ops': 'error',
-      },
+      rules: Object.entries(rulesWithTSOverrides).reduce((rules, [key, value]) => {
+        rules[`@typescript-eslint/${key}`] = value;
+        return rules;
+      }, {}),
     },
   ],
 };
