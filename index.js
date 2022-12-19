@@ -3,6 +3,7 @@ const rulesWithTSOverrides = {
   'comma-dangle': ['error', 'always-multiline'],
   'comma-spacing': 'error',
   'dot-notation': 'error',
+  'func-call-spacing': 'error',
   indent: ['error', 2],
   'keyword-spacing': ['error', { before: true, after: true }],
   'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
@@ -124,7 +125,6 @@ module.exports = {
     'jsx-quotes': ['error', 'prefer-double'],
     'key-spacing': ['error', { beforeColon: false, afterColon: true, mode: 'strict' }],
     'linebreak-style': ['error', 'unix'],
-    'func-call-spacing': 'error',
     'max-len': ['error', {
       code: 200,
       ignoreComments: true,
