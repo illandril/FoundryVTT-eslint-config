@@ -166,16 +166,6 @@ module.exports = {
   reportUnusedDisableDirectives: true,
   overrides: [
     {
-      files: '**/*.test.*',
-      rules: {
-        'max-depth': 'off',
-        'max-lines-per-function': 'off',
-        'max-nested-callbacks': 'off',
-        'max-len': 'off',
-        '@typescript-eslint/unbound-method': 'off',
-      },
-    },
-    {
       files: '**/*.ts',
       extends: [
         'plugin:@typescript-eslint/recommended',
@@ -186,6 +176,16 @@ module.exports = {
         rules[`@typescript-eslint/${key}`] = value;
         return rules;
       }, {}),
+    },
+    {
+      files: '**/*.test.*',
+      rules: {
+        'max-depth': 'off',
+        'max-lines-per-function': 'off',
+        'max-nested-callbacks': 'off',
+        'max-len': 'off',
+        '@typescript-eslint/unbound-method': 'off',
+      },
     },
   ],
 };
