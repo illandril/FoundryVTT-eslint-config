@@ -182,6 +182,7 @@ module.exports = {
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
       ],
       rules: Object.entries(rulesWithTSOverrides).reduce((rules, [key, value]) => {
+        rules[key] = 'off';
         rules[`@typescript-eslint/${key}`] = value;
         return rules;
       }, {}),
