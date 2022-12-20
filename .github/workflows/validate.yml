@@ -4,7 +4,7 @@
 # This workflow will...
 # - Run tests using node
 
-name: Node.js CI
+name: Validate
 
 on:
   push:
