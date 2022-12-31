@@ -185,7 +185,7 @@ module.exports = {
           },
           singleline: {
             delimiter: 'comma',
-            requireLast: true,
+            requireLast: false,
           },
         }],
         '@typescript-eslint/type-annotation-spacing': 'error',
