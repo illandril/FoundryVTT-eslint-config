@@ -158,7 +158,8 @@ module.exports = {
     'import/no-duplicates': 'error',
     'import/order': ['error', {
       'newlines-between': 'never',
-      alphabetize: { order: 'asc' },
+      alphabetize: { order: 'asc', caseInsensitive: true },
+      warnOnUnassignedImports: true,
     }],
 
     ...rulesWithTSOverrides,
