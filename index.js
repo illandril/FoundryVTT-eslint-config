@@ -171,11 +171,24 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
       ],
-      rules: Object.entries(rulesWithTSOverrides).reduce((rules, [key, value]) => {
-        rules[key] = 'off';
-        rules[`@typescript-eslint/${key}`] = value;
-        return rules;
-      }, {}),
+      rules: {
+        ...Object.entries(rulesWithTSOverrides).reduce((rules, [key, value]) => {
+          rules[key] = 'off';
+          rules[`@typescript-eslint/${key}`] = value;
+          return rules;
+        }, {}),
+
+        '@typescript-eslint/member-delimiter-style': ['error', {
+          multiline: {
+            delimiter: 'none',
+          },
+          singleline: {
+            delimiter: 'comma',
+            requireLast: true,
+          },
+        }],
+        '@typescript-eslint/type-annotation-spacing': 'error',
+      },
     },
     {
       files: '**/*.test.*',
