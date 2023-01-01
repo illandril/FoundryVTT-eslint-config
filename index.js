@@ -102,7 +102,7 @@ module.exports = {
     'no-useless-rename': 'error',
     'no-useless-return': 'error',
     'no-var': 'error',
-    'no-void': 'error',
+    'no-void': ['error', { allowAsStatement: true }],
     'one-var': ['error', 'never'],
     'prefer-arrow-callback': 'error',
     'prefer-const': 'error',
