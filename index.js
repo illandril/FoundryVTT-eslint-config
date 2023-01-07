@@ -52,7 +52,6 @@ module.exports = {
     'require-atomic-updates': 'error',
 
     'accessor-pairs': 'error',
-    'arrow-body-style': 'error',
     camelcase: 'error',
     'class-methods-use-this': 'error',
     complexity: 'error',
