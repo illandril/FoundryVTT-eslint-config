@@ -53,7 +53,6 @@ module.exports = {
 
     'accessor-pairs': 'error',
     camelcase: 'error',
-    'class-methods-use-this': 'error',
     complexity: 'error',
     'consistent-return': 'error',
     curly: ['error', 'all'],
