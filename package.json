@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/illandril/FoundryVTT-eslint-config#readme",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.54.0",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
     "@typescript-eslint/parser": "^5.54.0",
     "eslint": "^8.35.0",
     "eslint-import-resolver-typescript": "^3.5.3",
