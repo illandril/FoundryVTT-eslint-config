@@ -63,7 +63,7 @@ module.exports = {
     'dot-location': ['error', 'property'],
     eqeqeq: 'error',
     'grouped-accessor-pairs': 'error',
-    'id-length': ['error', { min: 2, exceptions: ['x', 'y', 'i', 'a', 'b'] }],
+    'id-length': ['error', { min: 2, exceptions: ['x', 'y', 'i', 'a', 'b', 'w', 'h'] }],
     'max-depth': ['error', 4],
     'max-lines-per-function': ['error', 50],
     'max-nested-callbacks': ['error', 4],
