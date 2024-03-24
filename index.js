@@ -11,6 +11,7 @@ const rulesWithTSOverrides = {
   'no-extra-parens': 'error',
   'no-invalid-this': 'error',
   'no-shadow': 'error',
+  'no-unused-vars': 'error',
   'object-curly-spacing': ['error', 'always'],
   quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }],
   semi: ['error', 'always'],
