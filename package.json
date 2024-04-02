@@ -1,6 +1,6 @@
 {
   "name": "@illandril/eslint-config-foundryvtt",
-  "version": "1.9.2",
+  "version": "1.10.0",
   "description": "ESLint rules used by illandril for his FoundryVTT modules",
   "main": "index.js",
   "scripts": {
