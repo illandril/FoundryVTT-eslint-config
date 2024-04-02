@@ -153,12 +153,40 @@ module.exports = {
     'unicode-bom': ['error', 'never'],
     'wrap-iife': ['error', 'inside'],
 
+    'import/first': 'error',
     'import/newline-after-import': 'error',
     'import/no-duplicates': 'error',
+    'import/no-self-import': 'error',
+    'import/no-useless-path-segments': 'error',
     'import/order': ['error', {
-      'newlines-between': 'never',
-      alphabetize: { order: 'asc', caseInsensitive: true },
+      'newlines-between': 'always',
+      alphabetize: { order: 'asc', caseInsensitive: true, orderImportKind: 'asc' },
       warnOnUnassignedImports: true,
+      pathGroups: [
+        {
+          pattern: './*/**',
+          group: 'sibling',
+          position: 'before',
+        },
+        {
+          pattern: './*/',
+          group: 'sibling',
+          position: 'after',
+        },
+        {
+          pattern: './*.scss',
+          group: 'object',
+          position: 'after',
+        },
+      ],
+      distinctGroup: true,
+      groups: [
+        'builtin',
+        'external',
+        'internal',
+        'parent',
+        'sibling',
+      ],
     }],
 
     ...rulesWithTSOverrides,
@@ -188,6 +216,7 @@ module.exports = {
           },
         }],
         '@typescript-eslint/type-annotation-spacing': 'error',
+        '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }],
       },
     },
     {
